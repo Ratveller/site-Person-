@@ -1,0 +1,52 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/layout";
+@import "compass/typography";
+@import "compass/utilities";
+
+/*===================================
+=            Other style            =
+===================================*/
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+/* Validation Css */
+
+body {
+	font-family: "RobotoRegular", sans-serif;
+	font-size: 16px;
+	input,
+	textarea {
+		&:focus:required:invalid {color: #000;}
+	}
+	input,
+	textarea {
+		&:required:valid {background-color: #FFF}
+	}
+}
+.container {
+	width: 950px;
+	margin: 0 auto;
+}
+/*=====  End of Other style  ======*/
+#header {
+	.person_name {
+		span {
+			display: block;
+		}
+	}
+}
+
