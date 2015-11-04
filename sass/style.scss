@@ -24,7 +24,6 @@
 	opacity: 1;
 }
 /* Validation Css */
-
 body {
 	font-family: "RobotoRegular", sans-serif;
 	font-size: 16px;
@@ -37,16 +36,70 @@ body {
 		&:required:valid {background-color: #FFF}
 	}
 }
+a {text-decoration: none;}
 .container {
 	width: 950px;
 	margin: 0 auto;
 }
 /*=====  End of Other style  ======*/
+
+$main_color: #3493D3;
+$main_b: darken($main_color, 15%);
+/*==============================
+=            Header            =
+==============================*/
 #header {
+	background: url(../img/header_bg.png);
+	padding-top: 50px;
+	height: 270px;
 	.person_name {
-		span {
-			display: block;
+		color: #fff;
+		font: bold 2.2em "Lato",sans-serif;
+		text-transform: uppercase;
+		text-shadow: 1px 1px 5px #000; 
+	}
+	.person_prof {
+		font: 1.1em "lato", sans-serif;
+		text-transform: uppercase;
+		color: $main_b;
+		margin-bottom: 40px;
+		text-shadow: 1px 1px 5px #000; 
+	}
+	.nav {
+		display: block;
+		transform: skew(-30deg, 0);
+		li {
+			margin-right: -5px;
+			display: inline-block;
+			background-color: $main_color;
+			position: relative;
+			&:nth-Child(4):after {
+				content: '';
+				width: 100%;
+				height: 500px;
+				background-color: rgba(52,148,212, .1);
+				position: absolute;
+				bottom: -115px;
+				left: 0;
+				z-index: -10;
+			}
+			&:active, &:hover {
+				background-color: $main_b;
+			}
+			a {
+				font: 1.1em 'Lato', sans-serif;
+				display: block;
+				padding: 15px 30px;
+				text-align: center;
+				transform: skew(30deg, 0);
+				color: #fff;
+				text-transform: uppercase;
+				text-shadow: 1px 1px 5px #000; 
+			}
 		}
 	}
 }
+/*=====  End of Header  ======*/
+
+
 
